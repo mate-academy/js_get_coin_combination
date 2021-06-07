@@ -7,7 +7,7 @@ coins[2] = number of dimes (1 dime = 10 cents)
 coins[3] = number of quarters (1 quarter = 25 cents)
 
 Examples:
-```
+```js
 getCoinCombination(1) = [1, 0, 0, 0] // 1 penny
 getCoinCombination(6) = [1, 1, 0, 0] // 1 penny + 1 nickel
 getCoinCombination(17) = [2, 1, 1, 0] // 2 pennies + 1 nickel + 1 dime
