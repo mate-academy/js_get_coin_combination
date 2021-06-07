@@ -1,10 +1,10 @@
 Write a tests for function `getCoinCombination` that accepts a non-negative integer `cents` representing the amount of cents and returns the minimum number of coins combination of the same value.
 
 The function returns an array where:
-coins[0] = number of pennies (1 penny = 1 cent)
-coins[1] = number of nickels (1 nickel = 5 cents)
-coins[2] = number of dimes (1 dime = 10 cents)
-coins[3] = number of quarters (1 quarter = 25 cents)
+coins[0] = number of pennies (1 penny = 1 cent)  
+coins[1] = number of nickels (1 nickel = 5 cents)  
+coins[2] = number of dimes (1 dime = 10 cents)  
+coins[3] = number of quarters (1 quarter = 25 cents)  
 
 Examples:
 ```js
