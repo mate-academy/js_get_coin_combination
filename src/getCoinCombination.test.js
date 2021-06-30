@@ -25,7 +25,7 @@ describe(`Function 'getCoinCombination':`, () => {
     expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
-  it(`should return 2 pennys, 1 nickel and 1 dime`
+  it(`should return 2 pennies, 1 nickel and 1 dime`
   + `if amount of coins = 17`, () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
