@@ -21,15 +21,16 @@ describe(`Function 'getCoinCombination':`, () => {
     expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
-  it(`should return 1 nickel if amount of coins = 5`, () => {
+  it(`should return 1 penny and 1 nickel if amount of coins = 6`, () => {
     expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
-  it(`should return 1 dime if amount of coins = 10`, () => {
+  it(`should return 2 pennys, 1 nickel and 1 dime`
+  + `if amount of coins = 17`, () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
   it(`should return 1 quarter if amount of coins = 25`, () => {
-    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
+    expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
 });
