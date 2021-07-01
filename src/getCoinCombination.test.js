@@ -36,7 +36,7 @@ describe(`Function 'getCoinCombination':`, () => {
     expect(getCoinCombination(100)).toEqual([0, 0, 0, 4]);
   });
 
-  it(`should return [0, 0, 0, 4] if amount = 99`, () => {
+  it(`should return [4, 0, 2, 3] if amount = 99`, () => {
     expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
   });
 });
