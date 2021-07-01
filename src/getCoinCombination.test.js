@@ -9,7 +9,7 @@ describe(`Function 'getCoinCombination':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(getCoinCombination(1)).toBeInstanceOf(Array);
+    expect(getCoinCombination()).toBeInstanceOf(Array);
   });
 
   it(`should return [0, 0, 0, 0] if amount = 0`, () => {
@@ -18,6 +18,10 @@ describe(`Function 'getCoinCombination':`, () => {
 
   it(`should return [2, 0, 0, 0] if amount = 2`, () => {
     expect(getCoinCombination(2)).toEqual([2, 0, 0, 0]);
+  });
+
+  it(`should return [0, 1, 0, 0] if amount = 5`, () => {
+    expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
   });
 
   it(`should return [0, 0, 1, 0] if amount = 10`, () => {
