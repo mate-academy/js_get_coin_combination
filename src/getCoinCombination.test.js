@@ -20,7 +20,7 @@ describe(`Function 'getCoinCombination':`, () => {
   });
 
   it(`should return [1, 1, 0, 0] if amount = 6`, () => {
-    expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
   it(`should return [4, 1, 0, 0] if amount = 9`, () => {
