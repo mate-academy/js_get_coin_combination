@@ -17,22 +17,19 @@ describe(`Function 'getCoinCombination':`, () => {
     expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
-  it(`should return [0, 0, 0, 0] if amount = 0`, () => {
-    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
-  });
-
-  it(`should return minimum number of coins combination 
-    of the same value`, () => {
+  it(`should return 1 penny, 1 nickel, 1 dime, 1 quarter`, () => {
     expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
   });
 
-  it(`should return minimum number of coins combination 
-    of the same value`, () => {
+  it(`should return 0 penny, 1 nickel, 1 dime, 1 quarter`, () => {
     expect(getCoinCombination(40)).toEqual([0, 1, 1, 1]);
   });
 
-  it(`should return minimum number of coins combination 
-    of the same value`, () => {
+  it(`should return 2 penny, 1 nickel, 1 dime, 1 quarter`, () => {
     expect(getCoinCombination(42)).toEqual([2, 1, 1, 1]);
+  });
+
+  it(`should return 2 quarters`, () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 });
