@@ -5,7 +5,7 @@
  *
  * @returns {number[]}
  */
-function getCoinCombination(cents) {
+function getCoinCombo(cents) {
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
@@ -18,4 +18,4 @@ function getCoinCombination(cents) {
   return coins;
 }
 
-module.exports = getCoinCombination;
+module.exports = getCoinCombo;
