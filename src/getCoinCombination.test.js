@@ -9,8 +9,7 @@ describe(`Function 'getCoinCombination':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(expect.arrayContaining(
-      getCoinCombination()));
+    expect(getCoinCombination()).toBeInstanceOf(Array);
   });
 
   it(`should return [0, 0, 0, 0] if amount = 0`, () => {
