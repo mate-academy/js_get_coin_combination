@@ -1,26 +1,26 @@
 'use strict';
 
 describe(`Function 'getCoinCombination':`, () => {
-  const getCoinCombo = require('./getCoinCombination');
+  const getCoinCombination = require('./getCoinCombination');
 
   it(`should be declared`, () => {
-    expect(getCoinCombo)
+    expect(getCoinCombination)
       .toBeInstanceOf(Function);
   });
 
   it(`should return an array`, () => {
-    expect(typeof (getCoinCombo())).toEqual('object');
+    expect(typeof (getCoinCombination())).toEqual('object');
   });
 
   it(`should return [0, 0, 0, 0] if amount = 0`, () => {
-    expect(getCoinCombo(0)).toEqual([0, 0, 0, 0]);
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
   // write more tests here
-  it(`should return Ok for amount = MAX_SAFE_INTEGER`, () => {
-    const bigIntCoin = 360287970189639;
-    const bigI = Number.MAX_SAFE_INTEGER;
+  it(`should return Ok for big amount > 32768`, () => {
+    const bigI = 360287;
 
-    expect(getCoinCombo(bigI)).toEqual([1, 1, 1, bigIntCoin]);
+    // const bigI = Number.MAX_SAFE_INTEGER;
+    expect(getCoinCombination(bigI)).toEqual([2, 0, 1, 14411]);
   });
 });
