@@ -9,7 +9,7 @@ describe(`Function 'getCoinCombination':`, () => {
   });
 
   it(`should return an array`, () => {
-    expect(typeof getCoinCombination(17)).toEqual('object');
+    expect(getCoinCombination()).toBeInstanceOf(Array);
   });
 
   it(`should return [0, 0, 0, 0] if amount = 0`, () => {
