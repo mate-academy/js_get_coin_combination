@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @param {number} cents
  *
@@ -18,4 +16,4 @@ function getCoinCombination(cents) {
   return coins;
 }
 
-module.exports = getCoinCombination;
+module.exports = { getCoinCombination };
