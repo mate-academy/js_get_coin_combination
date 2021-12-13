@@ -6,7 +6,6 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
-  
   it('Should return array with zeros if "cents" = 0', () => {
     expect(getCoinCombination(0))
       .toEqual([0,0,0,0])
@@ -42,26 +41,23 @@ describe('getCoinCombination', () => {
       .toEqual([1,1,1,0])
   })
 
-  it('Should return 1 penny and 1 nikel and 1 dime and 1 quarter,\
-   if cents = 41', () => {
+  it(`Should return 1 penny and 1 nikel and 1 dime and 1 quarter,
+   if cents = 41`, () => {
     expect(getCoinCombination(41))
       .toEqual([1,1,1,1])
   })
  
-   it('Should return 1 penny and 3 quarters,\
-   if cents = 76', () => {
+   it('Should return 1 penny and 3 quarters, if cents = 76', () => {
     expect(getCoinCombination(76))
       .toEqual([1,0,0,3])
    })
 
-   it('Should return 1 nikel and 1 quarter,\
-   if cents = 76', () => {
+   it('Should return 1 nikel and 1 quarter, if cents = 76', () => {
     expect(getCoinCombination(30))
       .toEqual([0,1,0,1])
    })
 
-   it('Should return 3 pennies and 1 nikel and 1 dime and 1 quarter,\
-   if cents = 76', () => {
+   it('Should return 3 pennies and 1 nikel and 1 dime and 1 quarter, if cents = 76', () => {
     expect(getCoinCombination(43))
       .toEqual([3,1,1,1])
    })
