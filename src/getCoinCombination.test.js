@@ -23,4 +23,12 @@ describe('getCoinCombination', () => {
   it('should be 2 quaters,if 50 cents', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
+
+  it('should be 0 if an array = 0', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
+
+  it('should be 1 if all index in array > 0', () => {
+    expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
+  });
 });
