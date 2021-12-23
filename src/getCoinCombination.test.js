@@ -38,6 +38,11 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(16)).toEqual([1, 1, 1, 0]);
   });
 
+  it(`should return array [0, 0, 0, 1]
+  if the number of cents equals 25`, () => {
+    expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
+  });
+
   it(`should return array [1, 1, 1, 1]
   if the number of cents equals 41`, () => {
     expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
