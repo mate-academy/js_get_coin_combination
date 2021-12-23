@@ -3,6 +3,8 @@
  *
  * @returns {number[]}
  */
+'use strict';
+
 function getCoinCombination(cents) {
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
