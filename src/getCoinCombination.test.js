@@ -12,11 +12,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination())
       .toBeInstanceOf(Array);
   });
-  //= number of pennies (1 penny = 1 cent);
-  // coins[1] = number of nickels (1 nickel = 5 cents);
-  // coins[2] = number of dimes (1 dime = 10 cents);
-  // coins[3] = number of quarters (1 quarter = 25 cents).
-
+ 
   test(`should return 0 coins when input is 0 cents`, () => {
     expect(getCoinCombination(0))
       .toEqual([0, 0, 0, 0]);
