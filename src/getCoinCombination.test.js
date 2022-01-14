@@ -1,3 +1,5 @@
+'use strict';
+
 describe('getCoinCombination', () => {
   const { getCoinCombination } = require('./getCoinCombination');
 
