@@ -12,7 +12,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination())
       .toBeInstanceOf(Array);
   });
- 
+
   test(`should return 0 coins when input is 0 cents`, () => {
     expect(getCoinCombination(0))
       .toEqual([0, 0, 0, 0]);
