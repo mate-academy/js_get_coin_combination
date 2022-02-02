@@ -15,24 +15,10 @@ describe('getCoinCombination', () => {
       .toEqual([1, 1, 1, 1]);
   });
 
-  it(`should return [cents] when value < 0`, () => {
-    const result = getCoinCombination(-3);
-
-    expect(result)
-      .toEqual([-3]);
-  });
-
   it(`should return [0, 0, 0, 0] when value equal 0`, () => {
     const result = getCoinCombination(0);
 
     expect(result)
       .toEqual([0, 0, 0, 0]);
-  });
-
-  it(`should discard floating point`, () => {
-    const result = getCoinCombination(15.3);
-
-    expect(result)
-      .toEqual([0, 1, 1, 0]);
   });
 });
