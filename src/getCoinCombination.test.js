@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-describe("getCoinCombination", () => {
-  const { getCoinCombination } = require("./getCoinCombination");
+describe('getCoinCombination', () => {
+  const { getCoinCombination } = require('./getCoinCombination');
 
   it(`should be declared`, () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
