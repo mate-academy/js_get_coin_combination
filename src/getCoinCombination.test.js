@@ -24,7 +24,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(10)).toEqual([0, 0, 10, 0]);
   });
 
-  it(`should be return [2, 0, 0, 1] if  cents = 10`, () => {
+  it(`should be return [2, 0, 0, 1] if  cents = 27`, () => {
     expect(getCoinCombination(27)).toEqual([2, 0, 0, 1]);
   });
 });
