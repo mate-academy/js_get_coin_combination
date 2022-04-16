@@ -33,7 +33,8 @@ describe('getCoinCombination', () => {
       .toEqual([0, 0, 0, 2]);
   });
 
-  it(`should return 4 penny, 1dimes, 4938271 quartes if value = 123456789`, () => {
+  it(`should return 4 penny, 1dimes, 4938271 quartes
+  if value = 123456789`, () => {
     expect(getCoinCombination(123456789))
       .toEqual([4, 0, 1, 4938271]);
   });
