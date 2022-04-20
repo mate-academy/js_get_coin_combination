@@ -27,7 +27,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(72)).toEqual([2, 0, 2, 2]);
   });
 
-  it('should return [3, 0, 1, 3] when input value =  88', () => {
+  it('should return [3, 0, 1, 3] when input value = 88', () => {
     expect(getCoinCombination(88)).toEqual([3, 0, 1, 3]);
   });
 });
