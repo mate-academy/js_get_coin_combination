@@ -18,7 +18,7 @@ describe('getCoinCombination', () => {
       .toHaveLength(4);
   });
 
-  it(`should return [0, 0, 0, 0] for 'cent' equal`, () => {
+  it(`should return [0, 0, 0, 0] for 'cent' equal 0`, () => {
     expect(getCoinCombination(0))
       .toEqual([0, 0, 0, 0]);
   });
