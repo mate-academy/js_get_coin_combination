@@ -15,7 +15,7 @@ describe('getCoinCombination', () => {
 
   it(`should return an array with 4 elements`, () => {
     expect(getCoinCombination(6))
-      .toBeInstanceOf(Array);
+      .toHaveLength(4);
   });
 
   it(`should return 0 if number of pennies 0`, () => {
@@ -38,7 +38,7 @@ describe('getCoinCombination', () => {
       .toEqual([2, 1, 1, 0]);
   });
 
-  it(`should return Nan if instead number of pennies - string`, () => {
+  it(`should return NaN if instead number of pennies - string`, () => {
     expect(getCoinCombination('q'))
       .toEqual([NaN, NaN, NaN, NaN]);
   });
