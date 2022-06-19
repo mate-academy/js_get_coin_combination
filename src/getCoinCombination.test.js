@@ -2,10 +2,11 @@
 
 describe('getCoinCombination', () => {
   const { getCoinCombination } = require('./getCoinCombination');
+
   it(`should be declared`, () => {
     expect(getCoinCombination)
       .toBeInstanceOf(Function);
-  }); 
+  });
 
   it('should return 0 for 0 coin', () => {
     expect(getCoinCombination(0))
@@ -22,10 +23,6 @@ describe('getCoinCombination', () => {
       .toEqual([0, 0, 0, 0]);
   });
 
-  it('should return NaN for string input', () => {
-    expect(getCoinCombination(undefined))
-      .toEqual([NaN, NaN, NaN, NaN]);
-  });
 
   it('should return 1 for 1 coin', () => {
     expect(getCoinCombination(1))
