@@ -6,6 +6,7 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
+  // could be hidden
   if (cents < 0 || typeof cents !== 'number' || isNaN(cents)) {
     throw new Error('Input should be a non-negative integer');
   };

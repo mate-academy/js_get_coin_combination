@@ -8,6 +8,7 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
+  // could be hidden
   it(`should throw error if input is not positive integer`, () => {
     const errorText = 'Input should be a non-negative integer';
 
