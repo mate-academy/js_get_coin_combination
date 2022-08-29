@@ -68,8 +68,32 @@ describe('getCoinCombination', () => {
       .toEqual([0, 0, 0, 1]);
   });
 
-  // it('throws on negative values', () => {
-  //   expect(getCoinCombination(-20))
-  //   .toTrow('Input positive values');
-  // });
+  it('return NaN when no passed arguments', () => {
+    expect(getCoinCombination())
+      .toEqual([NaN, NaN, NaN, NaN]);
+  });
+
+  it('return NaN when passed a string', () => {
+    expect(getCoinCombination('string'))
+      .toEqual([NaN, NaN, NaN, NaN]);
+  });
+
+  it('work with negative numbers', () => {
+    expect(getCoinCombination(-24))
+      .toEqual([1, 0, 0, -1]);
+
+    expect(getCoinCombination(-41))
+      .toEqual([4, 1, 0, -2]);
+  });
+
+  it('return coins rounded down for non-integers', () => {
+    expect(getCoinCombination(4.8))
+      .toEqual([4, 0, 0, 0]);
+
+    expect(getCoinCombination(24.7))
+      .toEqual([4, 0, 2, 0]);
+
+    expect(getCoinCombination(12.9))
+      .toEqual([2, 0, 1, 0]);
+  });
 });
