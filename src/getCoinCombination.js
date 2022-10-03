@@ -10,7 +10,7 @@ function getCoinCombination(cents) {
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
 
-  if (cents <= 0) {
+  if (isNaN(cents) || cents <= 0) {
     return coins;
   }
 

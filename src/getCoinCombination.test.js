@@ -23,6 +23,11 @@ describe('getCoinCombination', () => {
       .toEqual([0, 0, 0, 0]);
   });
 
+  it('returns all zeros for input is NaN', () => {
+    expect(getCoinCombination(NaN))
+      .toEqual([0, 0, 0, 0]);
+  });
+
   it('returns correct amount of quarters', () => {
     expect(getCoinCombination(67)[3])
       .toBe(2);
