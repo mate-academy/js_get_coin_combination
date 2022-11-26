@@ -43,7 +43,7 @@ describe('getCoinCombination', () => {
       .toEqual([0, 0, 1, 2]);
   });
 
-  it(`should be 89 cents`, () => {
+  it(`should be 79 cents`, () => {
     expect(getCoinCombination(79))
       .toEqual([4, 0, 0, 3]);
   });
