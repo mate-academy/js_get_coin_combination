@@ -63,12 +63,12 @@ describe('getCoinCombination', () => {
       .toEqual([1, 1, 1, 1]);
   });
 
-  it(`should return 1 quarter if the value is 51`, () => {
+  it(`should return 1 quarter and 2 pennies if the value is 51`, () => {
     expect(getCoinCombination(51))
       .toEqual([1, 0, 0, 2]);
   });
 
-  it(`should return 13 quarters and 3 penny if the value is 328`, () => {
+  it(`should return 13 quarters and 3 pennies if the value is 328`, () => {
     expect(getCoinCombination(328))
       .toEqual([3, 0, 0, 13]);
   });
