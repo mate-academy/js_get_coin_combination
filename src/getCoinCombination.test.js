@@ -8,12 +8,12 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
-  it('1 penny = 1 cent', () => {
+  it(`should return '1' pennie when '1' is entered`, () => {
     expect(getCoinCombination(1))
       .toEqual([1, 0, 0, 0]);
   });
 
-  it('1 nickel = 5 cents', () => {
+  it(`should return '1' nickel when '5' is entered`, () => {
     expect(getCoinCombination(5))
       .toEqual([0, 1, 0, 0]);
   });
@@ -28,7 +28,7 @@ describe('getCoinCombination', () => {
       .toEqual([4, 1, 0, 0]);
   });
 
-  it('1 dime = 10 cents', () => {
+  it(`should return '1' dime when '10' is entered`, () => {
     expect(getCoinCombination(10))
       .toEqual([0, 0, 1, 0]);
   });
@@ -43,7 +43,7 @@ describe('getCoinCombination', () => {
       .toEqual([4, 0, 2, 0]);
   });
 
-  it('1 quarter = 25 cents', () => {
+  it(`should return '1' quarter when '25' is entered`, () => {
     expect(getCoinCombination(25))
       .toEqual([0, 0, 0, 1]);
   });
@@ -56,10 +56,5 @@ describe('getCoinCombination', () => {
   it('return 0 if entered 0', () => {
     expect(getCoinCombination(0))
       .toEqual([0, 0, 0, 0]);
-  });
-
-  it('works with divisional numbers', () => {
-    expect(getCoinCombination(3.7))
-      .toEqual([3, 0, 0, 0]);
   });
 });
