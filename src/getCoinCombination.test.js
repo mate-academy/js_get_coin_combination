@@ -14,8 +14,8 @@ describe('getCoinCombination', () => {
   });
 
   it(`should return an array that lenght = 4`, () => {
-    expect(getCoinCombination(2).length)
-      .toBe(4);
+    expect(getCoinCombination(2))
+      .toHaveLength(4);
   });
 
   it('should return an array with four zeros if user enters 0', () => {
