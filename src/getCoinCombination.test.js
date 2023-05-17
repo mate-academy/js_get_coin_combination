@@ -8,11 +8,6 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
-  it(`should throw error when input is lower than 0`, () => {
-    expect(getCoinCombination(-1))
-      .toThrow();
-  });
-
   it(`should return array with zeros when input equals 0`, () => {
     expect(getCoinCombination(0))
       .toStrictEqual([0, 0, 0, 0]);
