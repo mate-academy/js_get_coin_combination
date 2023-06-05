@@ -13,7 +13,7 @@ describe('getCoinCombination', () => {
     expect(res).toStrictEqual([0, 0, 0, 0]);
   });
 
-  it('should return [2, 0, 0, 0] if cents is less than 5', () => {
+  it('should return [2, 0, 0, 0] if cents equal to 2', () => {
     const res = getCoinCombination(2);
 
     expect(res).toStrictEqual([2, 0, 0, 0]);
@@ -36,25 +36,25 @@ describe('getCoinCombination', () => {
 
     expect(res).toStrictEqual([3, 1, 0, 2]);
   });
-  
+
   it('should return [0, 0, 0, 1] for cents equal to 25', () => {
     const res = getCoinCombination(25);
 
     expect(res).toStrictEqual([0, 0, 0, 1]);
   });
-  
+
   it('should return [0, 0, 1, 0] for cents equal to 10', () => {
     const res = getCoinCombination(10);
 
     expect(res).toStrictEqual([0, 0, 1, 0]);
   });
-  
-  it('should return [4, 0, 0, 0] for cents equal to 29', () => {
+
+  it('should return [4, 0, 0, 1] for cents equal to 29', () => {
     const res = getCoinCombination(29);
 
     expect(res).toStrictEqual([4, 0, 0, 1]);
   });
-  
+
   it('should return [0, 1, 0, 2] for cents equal to 55', () => {
     const res = getCoinCombination(55);
 
