@@ -48,7 +48,7 @@ describe('getCoinCombination', () => {
       .toEqual([4, 1, 1, 2]);
   });
 
-  it(`should return 4 pennies 2 deme 3 quarter if coins = 99`, () => {
+  it(`should return 4 pennies 2 dime 3 quarter if coins = 99`, () => {
     expect(getCoinCombination(99))
       .toEqual([4, 0, 2, 3]);
   });
