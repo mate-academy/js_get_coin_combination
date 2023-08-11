@@ -65,8 +65,8 @@ describe('getCoinCombination', () => {
   });
 
   test('return the correct coin combination for large random amount', () => {
-    const expected = [4, 0, 2, 2634];
-    const actual = getCoinCombination(65874);
+    const expected = [2, 0, 1, 263499];
+    const actual = getCoinCombination(6587487);
 
     expect(actual).toEqual(expected);
   });
