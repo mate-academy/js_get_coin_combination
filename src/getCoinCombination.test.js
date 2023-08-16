@@ -9,65 +9,38 @@ describe('getCoinCombination', () => {
   });
 
   test('returns zero values for the input 0 cents', () => {
-    const expected = [0, 0, 0, 0];
-    const actual = getCoinCombination(0);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
   test('should return the correct coin combination for 25 cents', () => {
-    const expected = [0, 0, 0, 1];
-    const actual = getCoinCombination(25);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
 
   test('should return the correct coin combination for 1 cent', () => {
-    const expected = [1, 0, 0, 0];
-    const actual = getCoinCombination(1);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
   test('should return the correct coin combination for 100 cent', () => {
-    const expected = [0, 0, 0, 4];
-    const actual = getCoinCombination(100);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(100)).toEqual([0, 0, 0, 4]);
   });
 
   test('should return the correct coin combination for 99 cent', () => {
-    const expected = [4, 0, 2, 3];
-    const actual = getCoinCombination(99);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
   });
 
   test('should return the correct coin combination for 10 cent', () => {
-    const expected = [0, 0, 1, 0];
-    const actual = getCoinCombination(10);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(10)).toEqual([0, 0, 1, 0]);
   });
 
   test('should return the correct coin combination for 5 cent', () => {
-    const expected = [0, 1, 0, 0];
-    const actual = getCoinCombination(5);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
   });
 
   test('return correct coin combination for large amount', () => {
-    const expected = [0, 0, 0, 1600];
-    const actual = getCoinCombination(40000);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(40000)).toEqual([0, 0, 0, 1600]);
   });
 
   test('return the correct coin combination for large random amount', () => {
-    const expected = [2, 0, 1, 263499];
-    const actual = getCoinCombination(6587487);
-
-    expect(actual).toEqual(expected);
+    expect(getCoinCombination(6587487)).toEqual([2, 0, 1, 263499]);
   });
 });
