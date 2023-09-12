@@ -68,6 +68,10 @@ describe('getCoinCombination', () => {
     it('should return [0, 0, 0, 4] for 100 cents', () => {
       expect(getCoinCombination(100)).toEqual([0, 0, 0, 4]);
     });
+
+    it('should return [2, 0, 0, 4] for 102 cents', () => {
+        expect(getCoinCombination(102)).toEqual([2, 0, 0, 4]);
+      });
   });
 
   describe('To be truthy', () => {
