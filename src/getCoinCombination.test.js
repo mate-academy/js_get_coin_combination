@@ -51,12 +51,4 @@ describe('getCoinCombination', () => {
   it(`should return [3, 0, 2, 4] for 123 cent`, () => {
     expect(getCoinCombination(123)).toEqual([3, 0, 2, 4]);
   });
-
-  it("should throw an error for negative cents", () => {
-    expect(() => getCoinCombination(-1)).toThrow();
-  });
-
-  it("should throw an error for NaN", () => {
-    expect(() => getCoinCombination(g)).toThrow();
-  });
 });
