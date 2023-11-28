@@ -33,3 +33,15 @@ it('should return [0, 0, 0, 0] for 0 cents', () => {
 
   expect(result).toEqual([0, 0, 0, 0]);
 });
+
+it('should throw an error for negative numbers', () => {
+  expect(() => getCoinCombination(-1)).toThrow(Error);
+});
+
+it('should throw an error for float numbers', () => {
+  expect(() => getCoinCombination(1.5)).toThrow(Error);
+});
+
+it('should throw an error for strings', () => {
+  expect(() => getCoinCombination('hello')).toThrow(Error);
+});
