@@ -6,6 +6,10 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
+  if (typeof cents !== 'number' || cents < 0 || !Number.isInteger(cents)) {
+    throw new Error('Invalid input');
+  }
+
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
@@ -18,4 +22,4 @@ function getCoinCombination(cents) {
   return coins;
 }
 
-module.exports = { getCoinCombination };
+module.exports = getCoinCombination;
