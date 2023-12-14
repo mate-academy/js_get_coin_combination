@@ -5,8 +5,12 @@
  *
  * @returns {number[]}
  */
-function getCoinCombination(cents) {
-  let currentAmount = cents;
+function getCoinCombination(cents = 0) {
+  if (isNaN(cents) || typeof cents !== 'number') {
+    return 'please enter a number';
+  }
+
+  let currentAmount = Math.max(cents, 0);
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
 
