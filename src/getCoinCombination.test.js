@@ -8,6 +8,22 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
+  it(`should return '1' penny when '1' is entered`, () => {
+    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
+  });
+
+  it(`should return '1' nickel when '5' is entered`, () => {
+    expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
+  });
+
+  it(`should return '1' dime when '10' is entered`, () => {
+    expect(getCoinCombination(10)).toEqual([0, 0, 1, 0]);
+  });
+
+  it(`should return '1' quarter when '25' is entered`, () => {
+    expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
+  });
+
   it('should work with integers', () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
@@ -15,10 +31,6 @@ describe('getCoinCombination', () => {
   it(`should return the least combination of coins
 for the same value`, () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
-  });
-
-  it('should work with 1 value', () => {
-    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
   it('should work with 0 value', () => {
