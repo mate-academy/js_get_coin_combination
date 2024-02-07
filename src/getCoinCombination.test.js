@@ -4,62 +4,47 @@ describe('getCoinCombination', () => {
   const { getCoinCombination } = require('./getCoinCombination');
 
   it(`should be declared`, () => {
-    expect(getCoinCombination)
-      .toBeInstanceOf(Function);
+    expect(getCoinCombination).toBeInstanceOf(Function);
   });
 
-  it('combination of coins for 1 cent', () => {
-    const result = getCoinCombination(1);
-
-    expect(result).toEqual([1, 0, 0, 0]);
+  it(`should return 'object'`, () => {
+    expect(typeof getCoinCombination(1)).toBe('object');
   });
 
-  it('combination of coins for cent > 5', () => {
-    const result = getCoinCombination(6);
-
-    expect(result).toEqual([1, 1, 0, 0]);
+  it(`should return '1' pennie when '1' is entered`, () => {
+    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
-  it('combination of coins for cent > 15', () => {
-    const result = getCoinCombination(16);
-
-    expect(result).toEqual([1, 1, 1, 0]);
+  it(`should return '1' pennie and '1' nickel when '6' is entered`, () => {
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
-  it('combination of coins for cent >= 50', () => {
-    const result = getCoinCombination(50);
-
-    expect(result).toEqual([0, 0, 0, 2]);
+  it(`should return '1' pennie, '1' nickel and '1' dime when '16' is entered`
+    , () => {
+    expect(getCoinCombination(16)).toEqual([1, 1, 1, 0]);
   });
 
-  it('combination of coins for zero cents', () => {
-    const result = getCoinCombination(0);
-
-    expect(result).toEqual([0, 0, 0, 0]);
+  it(`should return '2' quarters when '50' is entered`, () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 
-  it('combination of coins for NaN value cents', () => {
-    const result = getCoinCombination('a');
-
-    expect(result).toEqual([NaN, NaN, NaN, NaN]);
+  it(`should return 0 coins when '0' is entered`, () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
-  it('combination of coins for number with decimal part', () => {
-    const result = getCoinCombination(1.5);
-
-    expect(result).toEqual([1, 0, 0, 0]);
+  it(`should return array with NaN values when 'NaN' is entered`, () => {
+    expect(getCoinCombination('a')).toEqual([NaN, NaN, NaN, NaN]);
   });
 
-  it('combination of coins if number of coins are omitted', () => {
-    const result = getCoinCombination();
-
-    expect(result).toEqual([NaN, NaN, NaN, NaN]);
+  it(`should return '1' pennie when '1.5' is entered`, () => {
+    expect(getCoinCombination(1.5)).toEqual([1, 0, 0, 0]);
   });
 
-  it('combination of coins if extra coin is added', () => {
-    const result = getCoinCombination(1, 6);
-
-    expect(result).toEqual([1, 0, 0, 0]);
+  it(`should return array with NaN values when the value of cent are omitted`, () => {
+    expect(getCoinCombination()).toEqual([NaN, NaN, NaN, NaN]);
   });
 
+  it(`should return '1' pennie when '1' and extra '6' are entered`, () => {
+    expect(getCoinCombination(1, 6)).toEqual([1, 0, 0, 0]);
+  });
 });
