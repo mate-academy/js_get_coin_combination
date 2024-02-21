@@ -7,6 +7,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination)
       .toBeInstanceOf(Function);
   });
+
   test(`should return the values 1, 0, 0, 0 when the input value is 1`, () => {
     expect(getCoinCombination(1)).toStrictEqual([1, 0, 0, 0]);
   });
