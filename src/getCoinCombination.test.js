@@ -63,4 +63,9 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(-3))
       .toEqual([0, 0, 0, 0]);
   });
+
+  it(`should work with decimals`, () => {
+    expect(getCoinCombination(16.8))
+      .toEqual([1, 1, 1, 0]);
+  });
 });
