@@ -18,4 +18,6 @@ function getCoinCombination(cents) {
   return coins;
 }
 
+console.log(getCoinCombination(99));
+
 module.exports = { getCoinCombination };
