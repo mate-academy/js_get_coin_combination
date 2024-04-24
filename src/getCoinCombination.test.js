@@ -19,19 +19,19 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(7)).toEqual([2, 1, 0, 0]);
   });
 
-  test("should return '1' p, '1' n, '1' d when '16' is entered", () => {
+  test("should return '1' penny, '1' nickel, '1' dime when '16' is entered", () => {
     expect(getCoinCombination('16')).toEqual([1, 1, 1, 0]);
   });
 
-  test("should return '2' p, '1' n, '1' d when '17' is entered", () => {
+  test("should return '2' pennied, '1' nickels, '1' dime when '17' is entered", () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
-  test("should return '3' p, '1' n, '1' dime when '18' is entered", () => {
+  test("should return '3' pennies, '1' nickels, '1' dime when '18' is entered", () => {
     expect(getCoinCombination(18)).toEqual([3, 1, 1, 0]);
   });
 
-  test("should return '4' p, '2' d, '1' q when '49' is entered", () => {
+  test("should return '4' pennies, '2' dimes, '1' quarter when '49' is entered", () => {
     expect(getCoinCombination(49)).toEqual([4, 0, 2, 1]);
   });
 
