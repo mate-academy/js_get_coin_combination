@@ -8,31 +8,31 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
-  it(`should be one penny`, () => {
+  it(`should return [1, 0, 0, 0] for 1 penny`, () => {
     expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
-  it(`should be one nickel`, () => {
+  it(`should return [0, 1, 0, 0] for 1 nickel`, () => {
     expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
   });
 
-  it(`should be one dime`, () => {
+  it(`should return [0, 0, 1, 0] for 1 dime`, () => {
     expect(getCoinCombination(10)).toEqual([0, 0, 1, 0]);
   });
 
-  it(`should be one quarter`, () => {
+  it(`should return [0, 0, 0, 1] for one quarter`, () => {
     expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
 
-  it(`should be 1 penny + 1 nickel`, () => {
+  it(`should return [1, 1, 0, 0] for 6 cents`, () => {
     expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
-  it(`should be 2 pennies + 1 nickel + 1 dime`, () => {
+  it(`should return [2, 1, 1, 0] for 17 cents`, () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
-  it(`should be 2 quarters`, () => {
+  it(`should return [0, 0, 0, 2] for 50 cents`, () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 });
