@@ -23,4 +23,12 @@ describe('getCoinCombination', () => {
   it(`should return '1' quarters when '25' is entered`, () => {
     expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
+
+  it(`should return '0' when '0' is entered`, () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
+
+  it(`should return '1, 1, 1, 1' when '41' is entered`, () => {
+    expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
+  });
 });
