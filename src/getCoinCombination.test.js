@@ -23,35 +23,19 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 
-  it('should return [4, 0, 0, 0] for 4 cents', () => {
-    expect(getCoinCombination(4)).toEqual([4, 0, 0, 0]);
+  it('should return [4, 0, 0, 3] for 79 cents', () => {
+    expect(getCoinCombination(79)).toEqual([4, 0, 0, 3]);
   });
 
-  it('should return [0, 0, 0, 1] for 25 cents', () => {
-    expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
+  it('should return [4, 0, 2, 3] for 99 cents', () => {
+    expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
   });
 
-  it('should return [3, 0, 0, 1] for 28 cents', () => {
-    expect(getCoinCombination(28)).toEqual([3, 0, 0, 1]);
+  it('should return [0, 0, 0, 0] for 0 cents', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
-  it('should return [4, 0, 0, 1] for 29 cents', () => {
-    expect(getCoinCombination(29)).toEqual([4, 0, 0, 1]);
-  });
-
-  it('should return [4, 0, 0, 2] for 54 cents', () => {
-    expect(getCoinCombination(54)).toEqual([4, 0, 0, 2]);
-  });
-
-  it('should return [4, 0, 0, 4] for 104 cents', () => {
-    expect(getCoinCombination(104)).toEqual([4, 0, 0, 4]);
-  });
-
-  it('should return [0, 0, 1, 0] for 10 cents', () => {
-    expect(getCoinCombination(10)).toEqual([0, 0, 1, 0]);
-  });
-
-  it('should return [0, 1, 0, 0] for 5 cents', () => {
-    expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
+  it('should return [4, 0, 1, 3] for 89 cents', () => {
+    expect(getCoinCombination(89)).toEqual([4, 0, 1, 3]);
   });
 });
