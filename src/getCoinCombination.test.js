@@ -7,11 +7,11 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
   });
 
-  it('should return [0,0,0,0] for 0 cents', () => {
+  it('should return [0,0,0,0] for 0 cent', () => {
     expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
-  it('should return [1,0,0,0] for 1 cents', () => {
+  it('should return [1,0,0,0] for 1 cent', () => {
     expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
@@ -25,5 +25,9 @@ describe('getCoinCombination', () => {
 
   it('should return [0,0,0,2] for 50 cents', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
+  });
+
+  it('should return correct combination for large values', () => {
+    expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
   });
 });
