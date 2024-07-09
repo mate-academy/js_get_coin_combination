@@ -36,6 +36,10 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(36)).toEqual([1, 0, 1, 1]);
   });
 
+  it('returns correct combination for 61 cent',() => {
+    expect(getCoinCombination(61)).toEqual([1, 0, 1, 2]);
+  });
+
   it('returns correct combination for 70 cent',() => {
     expect(getCoinCombination(70)).toEqual([0, 0, 2, 2]);
   });
