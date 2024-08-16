@@ -18,7 +18,7 @@ describe('getCoinCombination', () => {
       .toEqual([NaN, NaN, NaN, NaN]);
   });
 
-  it('should return correct number of coins', () => {
+  it('should return 1 quarter, 1 dime, 1 nickel and 1 penny for 41 cents', () => {
     expect(getCoinCombination(41))
       .toEqual([1, 1, 1, 1]);
   });
@@ -50,7 +50,7 @@ describe('getCoinCombination', () => {
         .toEqual([1, 1, 0, 0]);
     });
 
-    it('should return 1 nickel and 4 penny for 10 cents', () => {
+    it('should return 1 nickel and 4 penny for 9 cents', () => {
       expect(getCoinCombination(9))
         .toEqual([4, 1, 0, 0]);
     });
