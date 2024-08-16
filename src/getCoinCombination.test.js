@@ -23,6 +23,12 @@ describe('getCoinCombination', () => {
       .toEqual([1, 1, 1, 1]);
   });
 
+  it('should throw an error for negative number', () => {
+    expect(() => {
+      getCoinCombination(-10);
+    }).toThrow(new Error('Number of cents cant be negative!'));
+  });
+
   describe('edge value testing', () => {
     it('should return 0 for 0 cents', () => {
       expect(getCoinCombination(0))
