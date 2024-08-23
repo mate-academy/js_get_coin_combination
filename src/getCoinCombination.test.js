@@ -30,4 +30,8 @@ describe('getCoinCombination', () => {
   it('should return [0, 0, 0, 2] if cents equals 50', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
+
+  it('should ', () => {
+    expect(getCoinCombination(5.5)).toEqual([0, 1, 0, 0]);
+  });
 });
