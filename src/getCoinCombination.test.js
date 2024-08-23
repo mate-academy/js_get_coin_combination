@@ -7,6 +7,10 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
   });
 
+  it('should have a length of 4', () => {
+    expect(getCoinCombination()).toHaveLength(4);
+  });
+
   it('should return [0, 0, 0, 0] if cents equals 0', () => {
     expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
@@ -31,7 +35,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 
-  it('should ', () => {
+  it('should return [0, 1, 0, 0] if cents equals 5.5', () => {
     expect(getCoinCombination(5.5)).toEqual([0, 1, 0, 0]);
   });
 });
