@@ -4,59 +4,44 @@ describe('getCoinCombination', () => {
   const { getCoinCombination } = require('./getCoinCombination');
 
   it(`should be declared`, () => {
-    expect(getCoinCombination)
-      .toBeInstanceOf(Function);
+    expect(getCoinCombination).toBeInstanceOf(Function);
   });
 });
 
- test(`should return [0, 0] when input is (0, 0)`, () => {
-    const result = getCoinCombination(34);
+describe('getCoinCombination', () => {
+    const { getCoinCombination } = require('./getCoinCombination');
 
-    expect(typeof result[0]).toBe('number');
-    expect(typeof result[1]).toBe('number');
-    expect(typeof result[2]).toBe('number');
-    expect(typeof result[3]).toBe('number');
+ test('returns correct combination for 1 cent', () => {
+    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
-  test(`should return object`, () => {
-    const result = getCoinCombination(0);
-
-    expect(typeof result).toBe('object');
+  test('returns correct combination for 6 cents', () => {
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
-  test(`should return right length`, () => {
-    const result = getCoinCombination(0);
-
-    expect(result).toHaveLength(4);
+  test('returns correct combination for 17 cents', () => {
+    expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
-  test(`should return [0, 0, 0, 0] when input is (0)`, () => {
-    const result = getCoinCombination(0);
-
-    expect(result).toEqual([0, 0, 0, 0]);
+  test('returns correct combination for 50 cents', () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 
-  test(`should return [4, 0, 0, 0] when input is (4)`, () => {
-    const result = getCoinCombination(4);
-
-    expect(result).toEqual([4, 0, 0, 0]);
+  test('returns correct combination for 0 cents', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
-  test(`should return [1, 1, 0, 0] when input is (6)`, () => {
-    const result = getCoinCombination(6);
-
-    expect(result).toEqual([1, 1, 0, 0]);
+  test('returns correct combination for large amounts', () => {
+    expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
+    expect(getCoinCombination(100)).toEqual([0, 0, 0, 4]);
+    expect(getCoinCombination(123)).toEqual([3, 0, 2, 4]);
   });
 
-  test(`should return [1, 1, 1, 0] when input is (16)`, () => {
-    const result = getCoinCombination(16);
-
-    expect(result).toEqual([1, 1, 1, 0]);
+  test('handles edge cases correctly', () => {
+    expect(getCoinCombination(4)).toEqual([4, 0, 0, 0]);
+    expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
+    expect(getCoinCombination(10)).toEqual([0, 0, 1, 0]);
+    expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
 
-  test(`should return [1, 1, 1, 1] when input is (41)`, () => {
-    const result = getCoinCombination(41);
-
-    expect(result).toEqual([1, 1, 1, 1]);
-  });
-
+});
