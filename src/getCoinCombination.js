@@ -2,7 +2,6 @@
 
 /**
  * @param {number} cents
- *
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
