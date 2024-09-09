@@ -15,6 +15,26 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
+  it('should return [4, 0, 0, 0] for 4 cents', () => {
+    expect(getCoinCombination(4)).toEqual([4, 0, 0, 0]);
+  });
+
+  it('should return [0, 1, 0, 0] for 5 cents', () => {
+    expect(getCoinCombination(5)).toEqual([0, 1, 0, 0]);
+  });
+
+  it('should return [4, 1, 0, 0] for 9 cents', () => {
+    expect(getCoinCombination(9)).toEqual([4, 1, 0, 0]);
+  });
+
+  it('should return [0, 0, 1, 0] for 10 cents', () => {
+    expect(getCoinCombination(10)).toEqual([0, 0, 1, 0]);
+  });
+
+  it('should return [4, 0, 2, 0] for 24 cents', () => {
+    expect(getCoinCombination(24)).toEqual([4, 0, 2, 0]);
+  });
+
   it('should return [0, 0, 0, 1] for 25 cents', () => {
     expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
@@ -37,8 +57,8 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
-  it('should return [4, 0, 0, 0] for 4 cents', () => {
-    expect(getCoinCombination(4)).toEqual([4, 0, 0, 0]);
+  it('should return [0, 0, 0, 1] for 50 cents', () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 
   it('should return [3, 1, 1, 2] for 68 cents', () => {
@@ -49,11 +69,23 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(79)).toEqual([4, 0, 0, 3]);
   });
 
+  it('should return [4, 0, 2, 3] for 99 cents', () => {
+    expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
+  });
+
   it('should return [0, 0, 0, 40] for 1000 cents (10 dollars)', () => {
     expect(getCoinCombination(1000)).toEqual([0, 0, 0, 40]);
   });
 
   it('should return [0, 0, 0, 44] for 1100 cents (11 dollars)', () => {
     expect(getCoinCombination(1100)).toEqual([0, 0, 0, 44]);
+  });
+
+  it('should return [0, 0, 0, 4000] for 100000 cents', () => {
+    expect(getCoinCombination(100000)).toEqual([0, 0, 0, 4000]);
+  });
+
+  it('should return [0, 0, 0, 401] for 10025 cents', () => {
+    expect(getCoinCombination(10025)).toEqual([0, 0, 0, 401]);
   });
 });
