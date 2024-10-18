@@ -8,7 +8,7 @@
 
 function getCoinCombination(cents) {
   if (cents < 0) {
-    throw new Error('Not valid argument');
+    throw new Error('the argument must be a non-negative number');
   }
 
   let currentAmount = cents;
