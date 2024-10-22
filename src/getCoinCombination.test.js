@@ -14,8 +14,8 @@ describe(`test getCoinCombination function`, () => {
   });
 
   it(`'getCoinCombination' should return`
-  + `error message if cents = 0`, () => {
-    expect(() => getCoinCombination(0)).toThrow();
+  + `array of [0, 0, 0, 0] if cents = 0`, () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
   it(`'getCoinCombination' should return`
@@ -40,7 +40,7 @@ describe(`test getCoinCombination function`, () => {
   });
 
   it(`'getCoinCombination' should return`
-  + `array of [0, 0, 0, 4] if cents = 41`, () => {
+  + `array of [0, 0, 0, 4] if cents = 100`, () => {
     const result = getCoinCombination(100);
 
     expect(result).toEqual([0, 0, 0, 4]);
