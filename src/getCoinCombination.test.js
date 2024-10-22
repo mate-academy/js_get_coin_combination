@@ -40,6 +40,13 @@ describe(`test getCoinCombination function`, () => {
   });
 
   it(`'getCoinCombination' should return`
+  + `array of [0, 0, 0, 4] if cents = 41`, () => {
+    const result = getCoinCombination(100);
+
+    expect(result).toEqual([0, 0, 0, 4]);
+  });
+
+  it(`'getCoinCombination' should return`
   + `error message if cents = NaN`, () => {
     expect(() => getCoinCombination(NaN)).toThrow();
   });
