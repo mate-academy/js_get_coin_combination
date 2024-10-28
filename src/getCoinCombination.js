@@ -1,4 +1,5 @@
-'use strict';
+/* eslint quotes: ["off"] */
+"use strict";
 
 /**
  * @param {number} cents
