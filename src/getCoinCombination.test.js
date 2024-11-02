@@ -37,7 +37,7 @@ describe('getCoinCombination', () => {
   });
 
   it('should handle negative', () => {
-    expect(getCoinCombination(-4)).toEqual([0, 0, 0, 0]);
+    expect(() => getCoinCombination(-4)).toThrow();
   });
 
   it('should handle decimals', () => {
