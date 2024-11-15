@@ -16,8 +16,8 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
 
-  it(`should return 5 pennies for 5 cents`, () => {
-    expect(getCoinCombination(5)).toEqual([5, 0, 0, 0]);
+  it(`should return 3 pennies for 3 cents`, () => {
+    expect(getCoinCombination(3)).toEqual([3, 0, 0, 0]);
   });
 
   it(`should return 1 nickel for 5 cents`, () => {
