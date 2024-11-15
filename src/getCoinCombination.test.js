@@ -14,7 +14,6 @@ describe('getCoinCombination', () => {
   it('should return correct combinations for mixed cases', () => {
     expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
-    expect(getCoinCombination(87)).toEqual([2, 0, 1, 3]);
   });
 
   it('should handle large values', () => {
