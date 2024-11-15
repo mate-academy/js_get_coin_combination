@@ -37,7 +37,7 @@ describe('getCoinCombination', () => {
   });
 
   it(`should return 1 dime and 1 nickels for 15 cents`, () => {
-    expect(getCoinCombination(20)).toEqual([0, 1, 1, 0]);
+    expect(getCoinCombination(15)).toEqual([0, 1, 1, 0]);
   });
 
   it(`should return 1 dime, 1 nickel and 2 pennies for 17 cents`, () => {
