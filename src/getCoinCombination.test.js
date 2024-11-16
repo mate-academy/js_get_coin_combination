@@ -19,6 +19,10 @@ describe('getCoinCombination', () => {
     expect(typeof (result[0])).toBe('number');
   });
 
+  it('should return [0, 0, 0, 0] if input is null', () => {
+    expect(getCoinCombination(null)).toEqual([0, 0, 0, 0]);
+  });
+
   it('should return [2, 1, 1, 0]  if input is 17', () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
