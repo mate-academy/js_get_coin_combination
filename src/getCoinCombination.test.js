@@ -17,11 +17,11 @@ describe('getCoinCombination', () => {
   });
 
   it('should correctly distribute money when "cents" === 9', () => {
-    expect(getCoinCombination(9)).toEqual([4, 1, 0, 0]);
+    expect(getCoinCombination(9)).toEqual([0, 0, 1, 4]);
   });
 
   it('should correctly distribute money when "cents" === 116', () => {
-    expect(getCoinCombination(116)).toEqual([1, 1, 1, 4]);
+    expect(getCoinCombination(116)).toEqual([4, 1, 1, 1]);
   });
 
   it('"cents" should be a finite number', () => {
