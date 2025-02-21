@@ -6,6 +6,10 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
+  if (cents < 0 || isNaN(cents)) {
+    throw new Error('Invalid number or type of censt');
+  }
+
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
