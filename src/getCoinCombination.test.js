@@ -22,7 +22,7 @@ describe("getCoinCombination", () => {
     expect(result).toEqual([0, 0, 1, 0]);
   });
 
-  it(`should properly count 'quarters`, () => {
+  it(`should properly count 'quarters'`, () => {
     const result = getCoinCombination(50);
     expect(result).toEqual([0, 0, 0, 2]);
   });
