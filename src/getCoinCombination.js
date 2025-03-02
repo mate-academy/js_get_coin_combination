@@ -1,4 +1,5 @@
-'use strict';
+/* eslint-disable quotes */
+"use strict";
 
 /**
  * @param {number} cents
@@ -6,6 +7,10 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
+  if (typeof cents !== "number" || cents < 0 || !Number.isInteger(cents)) {
+    throw new Error("Invalid input: amount must be a non-negative integer.");
+  }
+
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
