@@ -8,7 +8,7 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
-  it('should get rezult with static length', () => {
+  it('should get result with static length', () => {
     const result = getCoinCombination(55);
 
     expect(result).toHaveLength(4);
