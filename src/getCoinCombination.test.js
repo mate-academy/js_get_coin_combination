@@ -19,7 +19,7 @@ describe('getCoinCombination', () => {
   });
 
   it('should prioritize larger coins first', () => {
-    expect(getCoinCombination(30)).toEqual([0, 1, 1, 1]);
+    expect(getCoinCombination(30)).toEqual([0, 1, 0, 1]);
     expect(getCoinCombination(75)).toEqual([0, 0, 0, 3]);
     expect(getCoinCombination(87)).toEqual([2, 0, 1, 3]);
   });
