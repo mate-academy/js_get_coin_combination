@@ -1,21 +1,18 @@
 'use strict';
 
-/**
- * @param {number} cents
- *
- * @returns {number[]}
- */
-function getCoinCombination(cents) {
-  let currentAmount = cents;
-  const values = [1, 5, 10, 25];
-  const coins = [0, 0, 0, 0];
+function getCoinCombination(amount) {
+  const coins = [50, 20, 10, 5, 2, 1];
+  const result = [];
+  let remainingAmount = amount;
 
-  for (let i = 3; i >= 0; i--) {
-    coins[i] = Math.floor(currentAmount / values[i]);
-    currentAmount -= coins[i] * values[i];
+  for (let i = 0; i < coins.length; i++) {
+    while (remainingAmount >= coins[i]) {
+      result.push(coins[i]);
+      remainingAmount -= coins[i];
+    }
   }
 
-  return coins;
+  return result;
 }
 
-module.exports = { getCoinCombination };
+module.exports = getCoinCombination;
