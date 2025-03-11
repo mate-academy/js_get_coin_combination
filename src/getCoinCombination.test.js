@@ -7,4 +7,52 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination)
       .toBeInstanceOf(Function);
   });
+
+  test('should return [1, 0, 0, 0] for 1 cent', () => {
+    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
+  });
+
+  test('should return [1, 1, 0, 0] for 6 cents', () => {
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
+  });
+
+  test('should return [2, 1, 1, 0] for 17 cents', () => {
+    expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
+  });
+
+  test('should return [0, 0, 0, 2] for 50 cents', () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
+  });
+
+  test('should return [0, 1, 0, 1] for 30 cents', () => {
+    expect(getCoinCombination(30)).toEqual([0, 1, 0, 1]);
+  });
+
+  test('should return [0, 0, 1, 1] for 35 cents', () => {
+    expect(getCoinCombination(35)).toEqual([0, 0, 1, 1]);
+  });
+
+  test('should return [4, 0, 0, 1] for 29 cents', () => {
+    expect(getCoinCombination(29)).toEqual([4, 0, 0, 1]);
+  });
+
+  test('should return [0, 0, 0, 4] for 100 cents', () => {
+    expect(getCoinCombination(100)).toEqual([0, 0, 0, 4]);
+  });
+
+  test('should return [0, 0, 0, 1] for 25 cents', () => {
+    expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
+  });
+
+  test('should return [1, 1, 1, 1] for 41 cents', () => {
+    expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
+  });
+
+  test('should return [0, 0, 1, 0] for 10 cents', () => {
+    expect(getCoinCombination(10)).toEqual([0, 0, 1, 0]);
+  });
+
+  test('should return [0, 0, 2, 0] for 20 cents', () => {
+    expect(getCoinCombination(20)).toEqual([0, 0, 2, 0]);
+  });
 });
