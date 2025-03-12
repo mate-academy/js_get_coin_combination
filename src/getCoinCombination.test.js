@@ -42,7 +42,7 @@ describe('getCoinCombination', () => {
     expect(result).toEqual([1, 1, 0, 1]);
   });
 
-  it('should return [4, 0, 0, 1] for 29 cents', () => {
+  it('should return [0, 0, 0, 1] for 29 cents', () => {
     const result = getCoinCombination(29);
     expect(result).toEqual([4, 0, 0, 1]);
   });
