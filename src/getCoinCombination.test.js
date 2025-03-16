@@ -8,6 +8,11 @@ describe('getCoinCombination', () => {
       .toBeInstanceOf(Function);
   });
 
+  it('should be return [0, 0, 0, 0] for (0)', () => {
+    expect(getCoinCombination(0))
+      .toEqual([0, 0, 0, 0]);
+  });
+
   it('should be return [1, 0, 0, 0] for (1)', () => {
     expect(getCoinCombination(1))
       .toEqual([1, 0, 0, 0]);
