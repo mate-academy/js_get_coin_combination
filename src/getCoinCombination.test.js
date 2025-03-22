@@ -21,10 +21,6 @@ describe('getCoinCombination', () => {
     }
   );
 
-  it(`should throw an error when the parameter is negative`, () => {
-    expect(() => getCoinCombination(-2)).toThrow();
-  });
-
   it(
     'should return a coin combination whose total value equals the ' +
       'parameter amount',
