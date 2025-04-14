@@ -1,0 +1,57 @@
+const { getCoinCombination } = require('./getCoinCombination'); // Replace './getCoinCombination' with your actual import path
+
+describe('getCoinCombination', () => {
+  // Basic Cases
+  it('should return [4, 0, 0, 0] for 4 cents', () => {
+    const result = getCoinCombination(4);
+    expect(result).toEqual([4, 0, 0, 0]);
+  });
+
+  it('should return [0, 1, 0, 0] for 5 cents', () => {
+    const result = getCoinCombination(5);
+    expect(result).toEqual([0, 1, 0, 0]);
+  });
+
+  it('should return [0, 0, 1, 0] for 10 cents', () => {
+    const result = getCoinCombination(10);
+    expect(result).toEqual([0, 0, 1, 0]);
+  });
+
+  it('should return [0, 0, 0, 1] for 25 cents', () => {
+    const result = getCoinCombination(25);
+    expect(result).toEqual([0, 0, 0, 1]);
+  });
+
+  // Mixed Coin Cases
+  it('should return [3, 1, 0, 0] for 19 cents', () => {
+    const result = getCoinCombination(19);
+    expect(result).toEqual([4, 0, 1, 0]);
+  });
+
+  it('should return [2, 0, 1, 1] for 42 cents', () => {
+    const result = getCoinCombination(42);
+    expect(result).toEqual([2, 0, 1, 1]);
+  });
+
+  it('should return [8, 1, 1, 1] for 96 cents', () => {
+    const result = getCoinCombination(96);
+    expect(result).toEqual([1, 1, 2, 3]);
+  });
+
+  // Edge Cases
+  it('should return [0, 0, 0, 0] for 0 cents', () => {
+    const result = getCoinCombination(0);
+    expect(result).toEqual([0, 0, 0, 0]);
+  });
+
+  // Large Amounts
+  it('should return [0, 0, 0, 40] for 1000 cents', () => {
+    const result = getCoinCombination(1000);
+    expect(result).toEqual([0, 0, 0, 40]);
+  });
+
+  it('should return [9, 1, 0, 0] for 94 cents', () => {
+    const result = getCoinCombination(94);
+    expect(result).toEqual([4, 1, 1, 3]);
+  });
+});
