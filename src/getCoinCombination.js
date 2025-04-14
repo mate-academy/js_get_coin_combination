@@ -7,6 +7,11 @@
  */
 function getCoinCombination(cents) {
   let currentAmount = cents;
+
+  if (!cents || cents < 0) {
+    currentAmount = 0;
+  }
+
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
 
