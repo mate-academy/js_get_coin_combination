@@ -14,12 +14,8 @@
 Приклади:
 
 ```js
-getCoinCombination(1) === [1, 0, 0, 0] // 1 пенні
-getCoinCombination(6) === [1, 1, 0, 0] // 1 пенні + 1 нікель
-getCoinCombination(17) === [2, 1, 1, 0] // 2 пенні + 1 нікель + 1 дайм
-getCoinCombination(50) === [0, 0, 0, 2] // 2 четвертаки
+getCoinCombination(1) === [1, 0, 0, 0]; // 1 пенні
+getCoinCombination(6) === [1, 1, 0, 0]; // 1 пенні + 1 нікель
+getCoinCombination(17) === [2, 1, 1, 0]; // 2 пенні + 1 нікель + 1 дайм
+getCoinCombination(50) === [0, 0, 0, 2]; // 2 четвертаки
 ```
-
-[Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
-
-Read more about [Jest expectations](https://jestjs.io/uk/docs/expect).
