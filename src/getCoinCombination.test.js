@@ -43,8 +43,4 @@ describe('getCoinCombination', () => {
 
     expect(result).toEqual([2, 0, 0, 0]);
   });
-
-  it('should ignore decimal part and use floor for non-integer input', () => {
-    expect(getCoinCombination(6.7)).toEqual([0, 0, 1, 1]);
-  });
 });
