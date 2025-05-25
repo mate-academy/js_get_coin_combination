@@ -91,6 +91,12 @@ describe('getCoinCombination', () => {
     expect(result).toStrictEqual([0, 1, 1, 0]);
   });
 
+  it('should return [3, 0, 1, 1] for 38 cents', () => {
+    const result = getCoinCombination(38);
+
+    expect(result).toEqual([3, 0, 1, 1]);
+  });
+
   it('should be [0, 0, 0, 2]', () => {
     const result = getCoinCombination(50);
 
