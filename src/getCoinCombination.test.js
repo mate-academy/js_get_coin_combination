@@ -37,7 +37,7 @@ describe('getCoinCombination', () => {
     expect(result).toStrictEqual([1, 1, 1, 1]);
   });
 
-  it('should be [1, 0, 0, 0]', () => {
+  it('should be [4, 0, 0, 0]', () => {
     const result = getCoinCombination(4);
 
     expect(result).toStrictEqual([4, 0, 0, 0]);
