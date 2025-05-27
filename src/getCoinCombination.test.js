@@ -3,6 +3,11 @@
 const { getCoinCombination } = require('./getCoinCombination');
 
 describe(`Function 'getCoinCombination':`, () => {
+  /**
+   * Coin order (based on implementation):
+   * [pennies, nickels, dimes, quarters]
+   */
+
   it(`should be declared`, () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
   });
@@ -42,7 +47,7 @@ describe(`Function 'getCoinCombination':`, () => {
   });
 
   it(`should return [4, 0, 1, 11] for 289 cents`, () => {
-    // 11 quarters (275) + 1 dime (10) + 4 pennies = 289
+    // 11 quarters (275) + 1 dime (10) + 4 pennies (4) = 289
     expect(getCoinCombination(289)).toEqual([4, 0, 1, 11]);
   });
 });
