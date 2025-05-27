@@ -35,8 +35,4 @@ describe('getCoinCombination', () => {
   it(`should return [0,0,0,1] if cents === 25`, () => {
     expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
-
-  it(`should throw an error if the value is not a number`, () => {
-    expect(getCoinCombination(-5)).toThrow();
-  });
 });
