@@ -1,6 +1,6 @@
 # QA Coin combination ([uk](readme.uk.md))
 
-Write tests for `getCoinCombination` function that takes a non-negative integer
+Write tests for the `getCoinCombination` function that takes a non-negative integer
 `cents` (a specific amount in cents) and returns a combination of the smallest
 possible number of coins, giving the same amount.
 
@@ -19,6 +19,8 @@ getCoinCombination(6) === [1, 1, 0, 0] // 1 penny + 1 nickel
 getCoinCombination(17) === [2, 1, 1, 0] // 2 pennies + 1 nickel + 1 dime
 getCoinCombination(50) === [0, 0, 0, 2] // 2 quarters
 ```
+
+_Note: Do not modify the `getCoinCombination.js` file._
 
 [Guideline](https://github.com/mate-academy/js_task-guideline/blob/master/README.md)
 
