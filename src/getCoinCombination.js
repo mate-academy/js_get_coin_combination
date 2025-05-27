@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @param {number} cents
+ * @param {number}cents
  *
  * @returns {number[]}
  */
