@@ -51,3 +51,4 @@ describe(`Function 'getCoinCombination':`, () => {
     expect(getCoinCombination(289)).toEqual([4, 0, 1, 11]);
   });
 });
+// 1
