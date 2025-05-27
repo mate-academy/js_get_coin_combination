@@ -7,4 +7,39 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination)
       .toBeInstanceOf(Function);
   });
+
+  it(`0 cent should return 0 penny, nickel, dime, quarters`, () => {
+    expect(getCoinCombination(0))
+      .toStrictEqual([0, 0, 0, 0]);
+  });
+
+  it(`1 cent should return 1 penny, 0 nickel, dime, quarters`, () => {
+    expect(getCoinCombination(1))
+      .toStrictEqual([1, 0, 0, 0]);
+  });
+
+  it(`6 cent should return 1 penny, nickel, 0 dime, quarters`, () => {
+    expect(getCoinCombination(6))
+      .toStrictEqual([1, 1, 0, 0]);
+  });
+
+  it(`17 cent should return 2 penny, 1 nickel, dime, 0 quarters`, () => {
+    expect(getCoinCombination(17))
+      .toStrictEqual([2, 1, 1, 0]);
+  });
+
+  it(`50 cent should return 0 penny, nickel, dime, 2 quarters`, () => {
+    expect(getCoinCombination(50))
+      .toStrictEqual([0, 0, 0, 2]);
+  });
+
+  it(`99 cent should return correct penny, nickel, dime, quarters`, () => {
+    expect(getCoinCombination(99))
+      .toStrictEqual([4, 0, 2, 3]);
+  });
+
+  // - `coins[0]` = number of pennies (1 penny = 1 cent);
+  // - `coins[1]` = number of nickels (1 nickel = 5 cents);
+  // - `coins[2]` = number of dimes (1 dime = 10 cents);
+  // - `coins[3]` = number of quarters (1 quarter = 25 cents).
 });
