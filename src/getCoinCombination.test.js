@@ -37,9 +37,4 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(99))
       .toStrictEqual([4, 0, 2, 3]);
   });
-
-  // - `coins[0]` = number of pennies (1 penny = 1 cent);
-  // - `coins[1]` = number of nickels (1 nickel = 5 cents);
-  // - `coins[2]` = number of dimes (1 dime = 10 cents);
-  // - `coins[3]` = number of quarters (1 quarter = 25 cents).
 });
