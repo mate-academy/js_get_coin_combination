@@ -1,7 +1,7 @@
 'use strict';
 
 describe('getCoinCombination', () => {
-  const { getCoinCombination } = require('./getCoinCombination');
+  const { getCoinCombination } = require('./getCoinCombination.js');
 
   it(`should return correct combinations for simple cases`, () => {
     expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
