@@ -4,8 +4,7 @@ describe('getCoinCombination', () => {
   const { getCoinCombination } = require('./getCoinCombination');
 
   it(`should be declared`, () => {
-    expect(getCoinCombination)
-      .toBeInstanceOf(Function);
+    expect(getCoinCombination).toBeInstanceOf(Function);
   });
 
   it('should return [0, 0, 0, 0] for 0 cents', () => {
