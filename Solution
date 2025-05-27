@@ -1,0 +1,62 @@
+function getCoinCombination(cents) {
+  if (cents < 0) {
+    throw new Error("Input 'cents' must be a non-negative integer.");
+  }
+
+  let quarters = Math.floor(cents / 25);
+  cents %= 25;
+
+  let dimes = Math.floor(cents / 10);
+  cents %= 10;
+
+  let nickels = Math.floor(cents / 5);
+  cents %= 5;
+
+  let pennies = cents;
+
+  return [pennies, nickels, dimes, quarters];
+}
+
+function assertArrayEquals(actual, expected, message) {
+  const areEqual = actual.length === expected.length &&
+                   actual.every((value, index) => value === expected[index]);
+  if (areEqual) {
+    console.log(`✅ PASS: ${message}`);
+  } else {
+    console.error(`❌ FAIL: ${message}`);
+    console.error(`   Expected: [${expected}]`);
+    console.error(`   Actual:   [${actual}]`);
+  }
+}
+
+console.log("--- Running getCoinCombination Tests ---");
+
+assertArrayEquals(getCoinCombination(0), [0, 0, 0, 0], "Should return [0, 0, 0, 0] for 0 cents");
+
+assertArrayEquals(getCoinCombination(1), [1, 0, 0, 0], "Should return [1, 0, 0, 0] for 1 cent");
+
+assertArrayEquals(getCoinCombination(5), [0, 1, 0, 0], "Should return [0, 1, 0, 0] for 5 cents");
+
+assertArrayEquals(getCoinCombination(10), [0, 0, 1, 0], "Should return [0, 0, 1, 0] for 10 cents");
+
+assertArrayEquals(getCoinCombination(25), [0, 0, 0, 1], "Should return [0, 0, 0, 1] for 25 cents");
+
+assertArrayEquals(getCoinCombination(6), [1, 1, 0, 0], "Should return [1, 1, 0, 0] for 6 cents");
+
+assertArrayEquals(getCoinCombination(17), [2, 1, 1, 0], "Should return [2, 1, 1, 0] for 17 cents");
+
+assertArrayEquals(getCoinCombination(50), [0, 0, 0, 2], "Should return [0, 0, 0, 2] for 50 cents");
+
+assertArrayEquals(getCoinCombination(24), [4, 0, 2, 0], "Should return [4, 0, 2, 0] for 24 cents");
+
+assertArrayEquals(getCoinCombination(26), [1, 0, 0, 1], "Should return [1, 0, 0, 1] for 26 cents");
+
+assertArrayEquals(getCoinCombination(99), [4, 2, 2, 3], "Should return [4, 2, 2, 3] for 99 cents");
+
+assertArrayEquals(getCoinCombination(15), [0, 1, 1, 0], "Should return [0, 1, 1, 0] for 15 cents");
+
+assertArrayEquals(getCoinCombination(40), [0, 1, 1, 1], "Should return [0, 1, 1, 1] for 40 cents");
+
+assertArrayEquals(getCoinCombination(123), [3, 2, 2, 4], "Should return [3, 2, 2, 4] for 123 cents");
+
+console.log("--- Tests Complete ---");
