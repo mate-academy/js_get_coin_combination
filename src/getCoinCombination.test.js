@@ -39,5 +39,4 @@ describe('getCoinCombination', () => {
   it('should return combination for amount multiple of larger coin', () => {
     expect(getCoinCombination(20)).toEqual([0, 0, 2, 0]);
   });
-  
 });
