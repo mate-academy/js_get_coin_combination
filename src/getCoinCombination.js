@@ -7,7 +7,7 @@
  */
 function getCoinCombination(cents) {
   let currentAmount = cents;
-  const values = [1, 5, 10, 25];
+  const values = [1, 5, 10, 25]; // пенні, нікель, дайм, четвертак
   const coins = [0, 0, 0, 0];
 
   for (let i = 3; i >= 0; i--) {
