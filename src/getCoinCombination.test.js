@@ -32,7 +32,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 
-  test(`Should return [3, 0, 2, 3] for (98) as input`, () => {
+  test(`Should return  [3, 0, 2, 3] for (98) as input`, () => {
     expect(getCoinCombination(98)).toEqual([3, 0, 2, 3]);
   });
 });
