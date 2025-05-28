@@ -16,7 +16,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
-  it('should return [2, 1, 1, 0] for 17 cents (1 dime + 1 nickel + 2 penny', () => {
+  it('should return [2, 1, 1, 0] for 17 cents (1 dime + 1 nickel + 2 penny)', () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
@@ -28,11 +28,11 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 
-  it('should return correct combination for 41 cents (1 quarter + 1 dime + 1 nickel + 1 penny', () => {
+  it('should return correct combination for 41 cents (1 quarter + 1 dime + 1 nickel + 1 penny)', () => {
     expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
   });
 
-  it('should return correct combination for 99 cents (3 quarter + 2 dimes + 0 nickel + 4 pennies', () => {
+  it('should return correct combination for 99 cents (3 quarter + 2 dimes + 0 nickel + 4 pennies)', () => {
     expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
   });
 
