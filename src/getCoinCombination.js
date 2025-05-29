@@ -2,20 +2,21 @@
 
 /**
  * @param {number} cents
- *
- * @returns {number[]}
+ * @returns {number[]} [pennies, nickels, dimes, quarters]
  */
 function getCoinCombination(cents) {
-  let currentAmount = cents;
-  const values = [1, 5, 10, 25];
-  const coins = [0, 0, 0, 0];
+  const coins = [0, 0, 0, 0]; // pennies, nickels, dimes, quarters
+  const coinValues = [1, 5, 10, 25];
+  let remaining = cents;
 
-  for (let i = 3; i >= 0; i--) {
-    coins[i] = Math.floor(currentAmount / values[i]);
-    currentAmount -= coins[i] * values[i];
+  for (let i = coinValues.length - 1; i >= 0; i--) {
+    const count = Math.floor(remaining / coinValues[i]);
+
+    coins[i] = count;
+    remaining -= count * coinValues[i];
   }
 
   return coins;
 }
 
-module.exports = { getCoinCombination };
+module.exports = getCoinCombination;
