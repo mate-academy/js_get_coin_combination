@@ -27,12 +27,10 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(17))
       .toStrictEqual([2, 1, 1, 0]);
   });
-
   it(`50 cent should return 0 penny, nickel, dime, 2 quarters`, () => {
     expect(getCoinCombination(50))
       .toStrictEqual([0, 0, 0, 2]);
   });
-
   it(`99 cent should return correct penny, nickel, dime, quarters`, () => {
     expect(getCoinCombination(99))
       .toStrictEqual([4, 0, 2, 3]);
