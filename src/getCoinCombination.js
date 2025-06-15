@@ -1,10 +1,11 @@
-'use strict';
+"use strict";
 
 /**
  * @param {number} cents
  *
  * @returns {number[]}
  */
+
 function getCoinCombination(cents) {
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
