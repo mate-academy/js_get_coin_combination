@@ -34,6 +34,7 @@ describe('getCoinCombination', () => {
 
   it('should return [2, 0, 0, 3] for 77 cents (3×25 + 2×1)', () => {
     expect(getCoinCombination(77)).toEqual([2, 0, 0, 3]);
+    // 3×25 = 75, 2×1 = 2 → 75 + 2 = 77 (total coins: 5)
   });
 
   it('should return [4, 0, 0, 4] for 104 cents (4×25 + 4×1)', () => {
@@ -44,9 +45,9 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(2500)).toEqual([0, 0, 0, 100]);
   });
 
-  it('should handle random mid-size values correctly (e.g., 99 cents)', () => {
+  it('should return [4, 0, 2, 3] for 99 cents (3×25 + 2×10 + 4×1)', () => {
     expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
-    // 3×25 = 75, 2×10 = 20, 4×1 = 4 → 75+20+4 = 99
+    // 3×25 = 75, 2×10 = 20, 4×1 = 4 → 75 + 20 + 4 = 99 (total coins: 9)
   });
 
   it('should not return undefined or null', () => {
