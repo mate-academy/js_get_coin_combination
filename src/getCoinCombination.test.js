@@ -7,4 +7,24 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination)
       .toBeInstanceOf(Function);
   });
+
+  test(`should return [1, 0, 0, 0] when parameter 1`, () => {
+    expect(getCoinCombination(1))
+      .toEqual([1, 0, 0, 0]);
+  });
+
+  test(`should return [1, 1, 0, 0] when parameter 6`, () => {
+    expect(getCoinCombination(6))
+      .toEqual([1, 1, 0, 0]);
+  });
+
+  test(`should return [2, 1, 1, 0] when parameter 17`, () => {
+    expect(getCoinCombination(17))
+      .toEqual([2, 1, 1, 0]);
+  });
+
+  test(`should return [0, 0, 0, 2] when parameter 50`, () => {
+    expect(getCoinCombination(50))
+      .toEqual([0, 0, 0, 2]);
+  });
 });
