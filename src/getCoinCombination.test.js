@@ -35,7 +35,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
 
-  test('should return [3, 0, 2, 1] for 58 cents', () => {
+  test('should return [3, 1, 0, 2] for 58 cents', () => {
     expect(getCoinCombination(58)).toEqual([3, 1, 0, 2]);
   });
 
