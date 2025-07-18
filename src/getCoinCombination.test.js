@@ -3,7 +3,7 @@
 describe('getCoinCombination', () => {
   const { getCoinCombination } = require('./getCoinCombination');
 
-  it(`1 quarter should be equal 25 cents`, () => {
+  it(`1 quarter should be equal 25 cents.`, () => {
     const value = getCoinCombination(25);
     const expected = [0, 0, 0, 1];
 
