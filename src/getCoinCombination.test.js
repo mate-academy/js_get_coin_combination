@@ -13,7 +13,7 @@ describe('getCoinCombination', () => {
   });
 
   it(`'cents' = 0 should return [0, 0, 0, 0]`, () => {
-    const result = getCoinCombination(0)
+    const result = getCoinCombination(0);
 
     expect(result).toEqual([0, 0, 0, 0]);
   });
@@ -42,7 +42,7 @@ describe('getCoinCombination', () => {
     expect(result).toEqual([0, 0, 0, 2]);
   });
 
-  it(`'cents' is negative should return [0, 0, 0, 0]`, () => {
+  it(`'cents' is a positive decimal should return [0, 0, 0, 0]`, () => {
     const result = getCoinCombination(1.7);
 
     expect(result).toEqual([1, 0, 0, 0]);
