@@ -29,7 +29,6 @@ describe('getCoinCombination', () => {
 
   it('should minimize coins for larger values', () => {
     expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
-    // Explanation: 3 quarters (75) + 2 dimes (20) + 0 nickels
-    // + 4 pennies (4) = 99
+    // pennies=4, nickels=0, dimes=2, quarters=3 => total 99 cents
   });
 });
