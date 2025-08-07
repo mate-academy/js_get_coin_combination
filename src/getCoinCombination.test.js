@@ -31,4 +31,12 @@ describe('getCoinCombination', () => {
   it('splits 50 cents into two 25-cent coins', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
+
+  it('returns all zeros for 0 cents', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
+
+  it('correctly breaks down 41 cents using all coin types', () => {
+    expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
+  });
 });
