@@ -20,7 +20,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(26)).toEqual([1, 0, 0, 1]);
   });
 
-  it('constructs 39 cents using one of each coin type', () => {
+  it('returns the correct coins for 39 cents', () => {
     expect(getCoinCombination(39)).toEqual([4, 0, 1, 1]);
   });
 
