@@ -1,5 +1,5 @@
 'use strict';
-
+ 
 /**
  * @param {number} cents
  *
