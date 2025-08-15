@@ -2,7 +2,7 @@
 
 describe('getCoinCombination', () => {
   const {
-    getCoinCombination
+    getCoinCombination,
   } = require('./getCoinCombination');
 
   it(`should be declared`, () => {
@@ -20,5 +20,17 @@ describe('getCoinCombination', () => {
 
   it('should return expected values for non-negative integer cents', () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
+  });
+
+  it('should return expected values for non-negative integer cents', () => {
+    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
+  });
+
+  it('should return expected values for non-negative integer cents', () => {
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
+  });
+
+  it('should return 4 element length array', () => {
+    expect(getCoinCombination(99)).toEqual([4, 0, 2, 3]);
   });
 });
