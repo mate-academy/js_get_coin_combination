@@ -3,7 +3,7 @@
 describe('getCoinCombination', () => {
   const {
     getCoinCombination,
-  } = require('./getCoinCombination');
+  } = require('./getCoinCombination.js');
 
   it(`should be declared`, () => {
     expect(getCoinCombination)
