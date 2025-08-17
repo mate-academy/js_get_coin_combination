@@ -2,12 +2,11 @@
 
 /**
  * @param {number} cents
- *
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
   let currentAmount = cents;
-  const values = [1, 5, 10, 25];
+  const values = [1, 5, 10, 25]; // pennies, nickels, dimes, quarters
   const coins = [0, 0, 0, 0];
 
   for (let i = 3; i >= 0; i--) {
@@ -18,4 +17,4 @@ function getCoinCombination(cents) {
   return coins;
 }
 
-module.exports = { getCoinCombination };
+module.exports = getCoinCombination; // <- eksportujemy bez obiektu
