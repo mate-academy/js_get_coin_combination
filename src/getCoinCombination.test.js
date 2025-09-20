@@ -29,9 +29,9 @@ describe('getCoinCombination', () => {
   });
 
   it(`if amount === 10 should return 1 on 'coins[2]'`, () => {
-    const result = getCoinCombination(5);
+    const result = getCoinCombination(10);
 
-    expect(result).toStrictEqual([0, 1, 0, 0]);
+    expect(result).toStrictEqual([0, 0, 1, 0]);
   });
 
   it(`if amount > 10 and < 25 result should be on 'coins[2]'
@@ -42,9 +42,9 @@ describe('getCoinCombination', () => {
   });
 
   it(`if amount === 25 should return 1 on 'coins[3]'`, () => {
-    const result = getCoinCombination(5);
+    const result = getCoinCombination(25);
 
-    expect(result).toStrictEqual([0, 1, 0, 0]);
+    expect(result).toStrictEqual([0, 0, 0, 1]);
   });
 
   it(`if amount > 25 result should be on 'coins[3]' with rest on
