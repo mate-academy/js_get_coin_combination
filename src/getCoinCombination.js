@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * @param {number} cents
  *
@@ -7,15 +6,17 @@
  */
 function getCoinCombination(cents) {
   let currentAmount = cents;
-  const values = [1, 5, 10, 25];
-  const coins = [0, 0, 0, 0];
+  const values = [25, 10, 5, 1]; // order: quarters, dimes, nickels, pennies
+  const result = [];
 
-  for (let i = 3; i >= 0; i--) {
-    coins[i] = Math.floor(currentAmount / values[i]);
-    currentAmount -= coins[i] * values[i];
+  for (let value of values) {
+    const count = Math.floor(currentAmount / value);
+    result.push(count);
+    currentAmount -= count * value;
   }
 
-  return coins;
+  // reverse into [pennies, nickels, dimes, quarters]
+  return [result[3], result[2], result[1], result[0]];
 }
 
 module.exports = { getCoinCombination };
