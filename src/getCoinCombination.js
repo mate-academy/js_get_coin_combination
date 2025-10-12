@@ -1,3 +1,10 @@
+'use strict';
+
+/**
+ * @param {number} cents
+ *
+ * @returns {number[]}
+ */
 function getCoinCombination(cents) {
   const values = [25, 10, 5, 1];
   const coins = [0, 0, 0, 0];
@@ -12,4 +19,5 @@ function getCoinCombination(cents) {
 }
 
 module.exports = { getCoinCombination };
+
 
