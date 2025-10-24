@@ -35,6 +35,14 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
   });
 
+  it('should return [2, 1, 1, 0] for 17 cents', () => {
+    expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
+  });
+
+  it('should return [0, 0, 0, 2] for 50 cents', () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
+  });
+
   it('should return [1, 0, 0, 1] for 26 cents', () => {
     expect(getCoinCombination(26)).toEqual([1, 0, 0, 1]);
   });
