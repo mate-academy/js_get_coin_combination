@@ -6,7 +6,7 @@ describe("getCoinCombination", () => {
     expect(getCoinCombination.name).toBe("getCoinCombination");
   });
 
-  it(`'cents' === 101`, () => {
+  it(`'cents' === 100`, () => {
     const result = getCoinCombination(100);
     expect(result).toBeInstanceOf(Array);
     expect(result).toEqual([0, 0, 0, 4]);
@@ -116,6 +116,16 @@ describe("getCoinCombination", () => {
     expect(totalSum(result)).toBe(5);
   });
 
+  it(`'cents' === 6`, () => {
+    const result = getCoinCombination(6);
+    expect(result).toBeInstanceOf(Array);
+    expect(result).toEqual([1, 1, 0, 0]);
+    result.forEach((part) => {
+      expect(Number.isInteger(part)).toBe(true);
+    });
+    expect(totalSum(result)).toBe(6);
+  });
+
   it(`'cents' === 10`, () => {
     const result = getCoinCombination(10);
     expect(result).toBeInstanceOf(Array);
@@ -124,6 +134,16 @@ describe("getCoinCombination", () => {
       expect(Number.isInteger(part)).toBe(true);
     });
     expect(totalSum(result)).toBe(10);
+  });
+
+  it(`'cents' === 17`, () => {
+    const result = getCoinCombination(17);
+    expect(result).toBeInstanceOf(Array);
+    expect(result).toEqual([2, 1, 1, 0]);
+    result.forEach((part) => {
+      expect(Number.isInteger(part)).toBe(true);
+    });
+    expect(totalSum(result)).toBe(17);
   });
 
   it(`'cents' === 25`, () => {
@@ -144,6 +164,16 @@ describe("getCoinCombination", () => {
       expect(Number.isInteger(part)).toBe(true);
     });
     expect(totalSum(result)).toBe(41);
+  });
+
+  it(`'cents' === 50`, () => {
+    const result = getCoinCombination(50);
+    expect(result).toBeInstanceOf(Array);
+    expect(result).toEqual([0, 0, 0, 2]);
+    result.forEach((part) => {
+      expect(Number.isInteger(part)).toBe(true);
+    });
+    expect(totalSum(result)).toBe(50);
   });
 
   it(`'cents' is decimal`, () => {
