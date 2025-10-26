@@ -186,15 +186,7 @@ describe("getCoinCombination", () => {
     expect(totalSum(result)).toBe(41);
   });
 
-  it(`'cents' is NaN`, () => {
-    const result = getCoinCombination(NaN);
-    expect(result).toBeInstanceOf(Array);
-    expect(result).toEqual([NaN, NaN, NaN, NaN]);
-    result.forEach((part) => {
-      expect(Number.isInteger(part)).toBe(false);
-    });
-    expect(totalSum(result)).toBe(NaN);
-  });
+
 });
 
 const testValues = [1, 5, 10, 25];

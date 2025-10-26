@@ -2,8 +2,6 @@
 
 /**
  * @param {number} cents
- * @param {number} total
- * @param {number} totalSum
  *
  * @returns {number[]}
  */
