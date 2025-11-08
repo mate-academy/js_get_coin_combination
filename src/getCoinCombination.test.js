@@ -21,6 +21,10 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
   });
 
+  it(`if cents === 0`, () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
+
   cases.forEach(({ input, expected }) => {
     it(`should work correctly with ${input} 'cents'`, () => {
       expect(getCoinCombination(input)).toEqual(expected);
