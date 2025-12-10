@@ -9,16 +9,17 @@ describe('getCoinCombination', () => {
   });
 
   it(`should return an array`, () => {
-    const result = getCoinCombination(100, [1, 5, 10, 25, 50]);
+    const result = getCoinCombination(100);
 
     expect(Array.isArray(result)).toBe(true);
   });
 
   it(`should return correct coin combination`, () => {
-    const totalCoins = 63;
-    const result = getCoinCombination(totalCoins);
+    const cents = 1301;
 
-    expect(result).toEqual([3, 0, 1, 2]);
+    const result = getCoinCombination(cents);
+
+    expect(result).toEqual([1, 0, 0, 52]);
   });
 
   it(`should return correct coin combination for zero cents`, () => {
