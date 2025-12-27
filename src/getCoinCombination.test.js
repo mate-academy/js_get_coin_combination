@@ -46,6 +46,9 @@ describe('getCoinCombination', () => {
 
     expect(getCoinCombination(24))
       .toEqual([4, 0, 2, 0]);
+
+    expect(getCoinCombination(17))
+      .toEqual([2, 1, 1, 0]);
   });
 
   it(`should return correct combination for amounts including all types of coins`, () => {
@@ -57,5 +60,8 @@ describe('getCoinCombination', () => {
 
     expect(getCoinCombination(84))
       .toEqual([4, 1, 0, 3]);
+
+    expect(getCoinCombination(50))
+      .toEqual([0, 0, 0, 2]);
   });
 });
