@@ -3,8 +3,28 @@
 describe('getCoinCombination', () => {
   const { getCoinCombination } = require('./getCoinCombination');
 
-  it(`should be declared`, () => {
-    expect(getCoinCombination)
-      .toBeInstanceOf(Function);
+  it(`should return [0, 0, 0, 0] for 0 cents`, () => {
+    expect(getCoinCombination(0))
+      .toStrictEqual([0, 0, 0, 0]);
+  });
+
+  it(`should return [1, 0, 0, 0] for 1 cents`, () => {
+    expect(getCoinCombination(1))
+      .toStrictEqual([1, 0, 0, 0]);
+  });
+
+  it(`should return [1, 1, 0, 0] for 6 cents`, () => {
+    expect(getCoinCombination(6))
+      .toStrictEqual([1, 1, 0, 0]);
+  });
+
+  it(`should return [2, 1, 1, 0] for 17 cents`, () => {
+    expect(getCoinCombination(17))
+      .toStrictEqual([2, 1, 1, 0]);
+  });
+
+  it(`should return [0, 0, 0, 2] for 50 cents`, () => {
+    expect(getCoinCombination(50))
+      .toStrictEqual([0, 0, 0, 2]);
   });
 });
