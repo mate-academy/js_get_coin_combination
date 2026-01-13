@@ -23,4 +23,8 @@ describe('getCoinCombination', () => {
   it(`when 50 cent it returns 2 quarters`, () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
+
+  it(`when 0 cent it returns [0, 0, 0, 0]`, () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
 });
