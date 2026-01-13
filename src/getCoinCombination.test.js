@@ -7,4 +7,24 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination)
       .toBeInstanceOf(Function);
   });
+
+  it(`when 1 cent it returns 1 penny`, () => {
+    expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
+  });
+
+  it(`when 6 cent it returns 1 penny + 1 nickel`, () => {
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
+  });
+
+  it(`when 17 cent it returns 2 pennies + 1 nickel + 1 dime`, () => {
+    expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
+  });
+
+  it(`when 50 cent it returns 2 quarters`, () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
+  });
+
+  it(`when 0 cent it returns [0, 0, 0, 0]`, () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
 });
