@@ -20,8 +20,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
-  it('should return an array[0, 0, 0, 2]for 58 cents', () => {
-    expect(getCoinCombination(58)).toEqual([0, 0, 0, 2]);
+  it('should return an array[0, 0, 0, 2] for 50 cents', () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 });
-
