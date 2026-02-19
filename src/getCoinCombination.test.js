@@ -17,7 +17,7 @@ describe('getCoinCombination', () => {
   it(' number of nickels (1 nickel = 5 cents)', () => {
     const result = getCoinCombination(5);
 
-    expect(result).toEqual([0, 5, 0, 0]);
+    expect(result).toEqual([0, 1, 0, 0]);
   });
 
   it('number of dimes (1 dime = 10 cents)', () => {
