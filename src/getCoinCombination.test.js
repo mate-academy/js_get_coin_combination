@@ -13,6 +13,12 @@ describe("getCoinCombination", () => {
     expect(result).toEqual([0, 0, 0, 0]);
   });
 
+  it(`one coin should return [1, 0, 0, 0]`, () => {
+    const result = getCoinCombination(0);
+
+    expect(result).toEqual([1, 0, 0, 0]);
+  });
+
   it(`for 6 coins should return [1, 1, 0, 0]`, () => {
     const result = getCoinCombination(6);
 
