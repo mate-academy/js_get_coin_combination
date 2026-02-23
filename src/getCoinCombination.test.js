@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-describe("getCoinCombination", () => {
-  const { getCoinCombination } = require("./getCoinCombination");
+describe('getCoinCombination', () => {
+  const { getCoinCombination } = require('./getCoinCombination');
 
   it(`should be declared`, () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
@@ -14,7 +14,7 @@ describe("getCoinCombination", () => {
   });
 
   it(`one coin should return [1, 0, 0, 0]`, () => {
-    const result = getCoinCombination(0);
+    const result = getCoinCombination(1);
 
     expect(result).toEqual([1, 0, 0, 0]);
   });
