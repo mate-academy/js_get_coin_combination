@@ -7,6 +7,10 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
   });
 
+  it('should return an array of zeros for 0 cents', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
+
   it('should count number of pennies correctly', () => {
     expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
@@ -27,7 +31,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
   });
 
-  it('should count number of quarters correctly', () => {
+  it('should count 1 quarter for 25 cents', () => {
     expect(getCoinCombination(25)).toEqual([0, 0, 0, 1]);
   });
 
@@ -35,7 +39,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(36)).toEqual([1, 0, 1, 1]);
   });
 
-  it('should count number of quarters correctly', () => {
+  it('should count 2 quarter for 50 cents', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 });
