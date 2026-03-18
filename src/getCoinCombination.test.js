@@ -18,4 +18,8 @@ describe('getCoinCombination', () => {
   it(`if 50 coin should be 2 quarters`, () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
+
+  it('should return [0, 0, 0, 0] for 0 cents', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
 });
