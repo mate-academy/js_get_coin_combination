@@ -6,6 +6,11 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
+
+  if (cents < 0) {
+    return 'Only positive numbers!';
+  }
+
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
