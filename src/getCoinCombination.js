@@ -6,7 +6,7 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
-  let currentAmount = cents;
+  let currentAmount = isNaN(cents) || cents < 0 ? 0 : cents;
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
 
