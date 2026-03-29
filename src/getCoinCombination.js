@@ -6,6 +6,14 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
+  if (typeof cents !== 'number') {
+    throw new Error('Not a number');
+  }
+
+  if (cents < 0) {
+    throw new Error('Param should be bigger than 0');
+  }
+
   let currentAmount = cents;
   const values = [1, 5, 10, 25];
   const coins = [0, 0, 0, 0];
