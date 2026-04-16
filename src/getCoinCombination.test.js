@@ -1,4 +1,5 @@
 'use strict';
+
 const { getCoinCombination } = require('./getCoinCombination');
 
 describe('getCoinCombination', () => {
@@ -28,5 +29,24 @@ describe('getCoinCombination', () => {
 
   it('should correct divide cents', () => {
     expect(getCoinCombination(41)).toEqual([1, 1, 1, 1]);
+  });
+
+  it('returns correct combination for 6 cents', () => {
+    expect(getCoinCombination(6)).toEqual([1, 1, 0, 0]);
+  });
+
+  it('returns correct combination for 17 cents', () => {
+    expect(getCoinCombination(17)).toEqual([2, 1, 1, 0]);
+  });
+
+  it('returns correct combination for 50 cents', () => {
+    expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
+  });
+
+  it('should return four types of coins', () => {
+    const result = getCoinCombination(23);
+
+    expect(Array.isArray(result)).toBeTruthy();
+    expect(result).toHaveLength(4);
   });
 });
