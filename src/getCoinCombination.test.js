@@ -23,7 +23,7 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination(50)).toEqual([0, 0, 0, 2]);
   });
 
-  it.only('empty value  should return [0, 0, 0, 0]', () => {
-    expect(getCoinCombination(0)).toBe([0, 0, 0, 0]);
+  it('empty value  should return [0, 0, 0, 0]', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
   });
 });
