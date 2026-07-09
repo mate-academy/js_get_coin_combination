@@ -19,27 +19,21 @@ describe('getCoinCombination', () => {
     expect(result).toEqual([1, 0, 0, 0]);
   });
 
-  it(`should return one nickel for value of 5`, () => {
-    const result = getCoinCombination(5);
+  it(`should return one nickel and one penny for value of 6`, () => {
+    const result = getCoinCombination(6);
 
-    expect(result).toEqual([0, 1, 0, 0]);
+    expect(result).toEqual([1, 1, 0, 0]);
   });
 
-  it(`should return one dime for value of 10`, () => {
-    const result = getCoinCombination(10);
+  it(`should return 2 penny, 1 nickel and 1 dime for value of 17`, () => {
+    const result = getCoinCombination(17);
 
-    expect(result).toEqual([0, 0, 1, 0]);
+    expect(result).toEqual([2, 1, 1, 0]);
   });
 
-  it(`should return one quarter for value of 25`, () => {
-    const result = getCoinCombination(25);
+  it(`should return 2 quarter for value of 50`, () => {
+    const result = getCoinCombination(50);
 
-    expect(result).toEqual([0, 0, 0, 1]);
-  });
-
-  it(`should return trutly result for value of 42`, () => {
-    const result = getCoinCombination(42);
-
-    expect(result).toEqual([2, 1, 1, 1]);
+    expect(result).toEqual([0, 0, 0, 2]);
   });
 });
