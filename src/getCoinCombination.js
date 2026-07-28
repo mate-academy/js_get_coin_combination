@@ -6,16 +6,28 @@
  * @returns {number[]}
  */
 function getCoinCombination(cents) {
-  let currentAmount = cents;
-  const values = [1, 5, 10, 25];
-  const coins = [0, 0, 0, 0];
-
-  for (let i = 3; i >= 0; i--) {
-    coins[i] = Math.floor(currentAmount / values[i]);
-    currentAmount -= coins[i] * values[i];
+  // Walidacja wejścia (opcjonalna, ale zalecana)
+  if (!Number.isInteger(cents) || cents < 0) {
+    throw new Error("Cents must be a non-negative integer");
   }
+
+  const valuesDesc = [25, 10, 5, 1]; // quarters → pennies
+  const coinsDesc = [0, 0, 0, 0];
+  let currentAmount = cents;
+
+  // Obliczamy liczbę monet w kolejności malejącej
+  for (let i = 0; i < valuesDesc.length; i++) {
+    coinsDesc[i] = Math.floor(currentAmount / valuesDesc[i]);
+    currentAmount -= coinsDesc[i] * valuesDesc[i];
+  }
+
+  // Mapujemy do wymaganego porządku: [pennies, nickels, dimes, quarters]
+  const coins = [coinsDesc[3], coinsDesc[2], coinsDesc[1], coinsDesc[0]];
 
   return coins;
 }
 
 module.exports = { getCoinCombination };
+
+
+
