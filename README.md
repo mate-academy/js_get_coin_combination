@@ -1,5 +1,7 @@
 # QA Coin combination ([uk](readme.uk.md))
 
+[Repository](https://github.com/AndrzejFront/js_get_coin_combination)
+
 Write tests for the `getCoinCombination` function that takes a non-negative integer
 `cents` (a specific amount in cents) and returns a combination of the smallest
 possible number of coins, giving the same amount.
