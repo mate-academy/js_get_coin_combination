@@ -7,6 +7,10 @@ describe('getCoinCombination', () => {
     expect(getCoinCombination).toBeInstanceOf(Function);
   });
 
+  it('0', () => {
+    expect(getCoinCombination(0)).toEqual([0, 0, 0, 0]);
+  });
+
   it('1 penny', () => {
     expect(getCoinCombination(1)).toEqual([1, 0, 0, 0]);
   });
