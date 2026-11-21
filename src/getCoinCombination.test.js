@@ -14,9 +14,9 @@ describe('getCoinCombination', () => {
   });
 
   it(`0 > 'cents' < 5`, () => {
-    const result = getCoinCombination(4);
+    const result = getCoinCombination(1);
 
-    expect(result).toEqual([4, 0, 0, 0]);
+    expect(result).toEqual([1, 0, 0, 0]);
   });
 
   it(`'cents' = 5`, () => {
@@ -38,9 +38,9 @@ describe('getCoinCombination', () => {
   });
 
   it(`10 > 'cents' < 25`, () => {
-    const result = getCoinCombination(18);
+    const result = getCoinCombination(17);
 
-    expect(result).toEqual([3, 1, 1, 0]);
+    expect(result).toEqual([2, 1, 1, 0]);
   });
 
   it(`'cents' = 25`, () => {
@@ -50,8 +50,8 @@ describe('getCoinCombination', () => {
   });
 
   it(`'cents' > 25`, () => {
-    const result = getCoinCombination(41);
+    const result = getCoinCombination(50);
 
-    expect(result).toEqual([1, 1, 1, 1]);
+    expect(result).toEqual([0, 0, 0, 2]);
   });
 });
